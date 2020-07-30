@@ -1,0 +1,42 @@
+<ons-page ng-controller="ServerPostController">
+    
+    <ons-toolbar fixed-style>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center" ng-bind-html="item.title"></div>
+    </ons-toolbar>
+
+    <section style="padding: 10px;">
+
+        <h2 class="title" ng-bind-html="item.title"></h2>
+
+        <div class="post-submitted">
+        Posted {{item.date}} by <strong>{{item.author.name}}</strong><br/>
+        <em>Modified {{item.modified}}</em>
+        </div>
+        
+        <p ng-show="{{item.attachments.length}}"><img ng-src="{{item.attachments[0].images.full.url}}"/></p>
+        
+        <p ng-bind-html="content"></p>
+
+        <p class="categories" ng-show="{{item.categories.length}}"><ons-icon icon="tags"></ons-icon>
+        <span ng-repeat="category in item.categories">{{category.title}} ({{category.post_count}}){{$last ? '' : ', '}}</span>
+        </p>
+
+        <p class="tags" ng-show="{{item.tags.length}}"><ons-icon icon="tags"></ons-icon>
+        <span ng-repeat="tag in item.tags">{{tag.title}} ({{tag.post_count}}){{$last ? '' : ', '}}</span>
+        </p>
+        
+        <ons-button modifier="outline" class="button-share" ng-click="sharePost()">
+        <ons-icon icon="share-alt"></ons-icon> Share this post
+        </ons-button>
+
+        <!--<a class="post-url" ng-href="{{item.url}}">View post</a>-->
+
+        <!-- Open the post using the InAppBrowser plugin (org.apache.cordova.inappbrowser) -->
+        <ons-button modifier="large" ng-click="loadURL(item.url)" class="post-show-more">
+        View post
+        </ons-button>
+
+    </section>
+
+</ons-page>

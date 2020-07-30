@@ -1,0 +1,41 @@
+<ons-page ng-controller="LoginController">
+    
+    <ons-toolbar fixed-style>
+    <div class="center">Wordpress Auth</div>
+    </ons-toolbar>
+
+    <section style="padding:10px; text-align:center">
+        
+        <div ng-show="afterAuthorization">
+
+            <div class="auth-form" ng-show="!isAuthorized">
+                
+                <input type="text" ng-model="username" class="text-input--underbar" placeholder="Username" value="">
+                <input type="password" ng-model="password" type="text" class="text-input--underbar" placeholder="Password" value="">
+                <br/>
+                <ons-button modifier="large" ng-click="login(username, password)" class="login-button">Log in</ons-button>
+                <br/>
+                
+                <div ng-show="error" ng-bind="error"></div>
+                
+                <div class="text-center">
+                <ons-button modifier="quiet" class="forgot-password" ng-click="register()">Create new account</ons-button>
+                <ons-button modifier="quiet" class="forgot-password" ng-click="reset()">Forgot your password?</ons-button>
+                </div>
+
+            </div>
+
+            <div ng-show="isAuthorized">
+                
+                <p>Hello, you are already logged in!</p>
+                <button ng-click="browse()" class="button login-button">Browse App</button>
+                
+                <ons-button modifier="quiet" ng-click="logout()" class="forgot-password">Logout</ons-button>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+</ons-page>

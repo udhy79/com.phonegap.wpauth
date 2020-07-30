@@ -1,0 +1,24 @@
+<ons-page ng-controller="ResetController">
+    
+    <ons-toolbar fixed-style>
+    <div class="center">Reset Password</div>
+    </ons-toolbar>
+
+    <section style="padding:10px;">
+        
+        <div class="auth-form">
+            <input type="text" placeholder="Username" ng-model="username" class="text-input--underbar" style="padding:10px 0 0 0;">
+            <br/>
+            <div align="center">
+            <button modifier="large--quiet" ng-click="reset(username)" class="button login-button">Reset Password</button>
+            <div ng-bind="message" style="text-align:center; padding:15px 0;"></div>
+            </div>
+        </div>
+        
+        <div align="center">
+        <ons-button modifier="outline" ng-click="resetBack()">Back to Login</ons-button>
+        </div>
+        
+    </section>
+
+</ons-page>

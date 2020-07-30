@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-Italic.ttf");
+  font-style:italic;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/SourceSansPro-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-LightItalic.ttf");
+  font-weight: 300;
+  font-style:italic;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-Bold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-BoldItalic.ttf");
+  font-weight: 600;
+  font-style:italic;
+}
+
+*, .navigation-bar, input, .text-input, .textarea, input[type=text], input[type=email], input[type=password], .button, .button--quiet, .search-input {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+}
+
+
+.left {
+    text-align: left;
+}
+
+.item {
+  padding: 10px;
+  line-height: 1;
+}
+.item-thum {
+  background-color: #ccc;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+.item-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+.item-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.3;
+  margin: 4px 0 0 0;
+  padding: 0 30px 0 0;
+}
+.item-label {
+  font-size: 12px;
+  color: #999;
+  float: right;
+}
+
+.page--menu-page__background {
+  background-color: #333;
+}
+
+.page--menu-page__content {
+  color: white;
+}
+
+.menu-close,
+.menu-close > .toolbar-button {
+  color: #999;
+}
+
+.menu-list,
+.menu-item:first-child,
+.menu-item:last-child,
+.menu-item {
+  background-color: transparent;
+  background-image: none !important;
+  border-color: transparent;
+  color: #fff;
+}
+
+.menu-item {
+  padding: 0 0 0 20px;
+  line-height: 52px;
+  height: 52px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
+}
+
+.menu-item:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-notification {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  height: 16px;
+  line-height: 16px;
+  min-width: 16px;
+  font-weight: 600;
+}
+
+.bottom-menu-list,
+.bottom-menu-item:first-child,
+.bottom-menu-item:last-child,
+.bottom-menu-item {
+  border-color: #393939;
+  background-color: transparent;
+  background-image: none !important;
+  color: #ccc;
+}
+
+.bottom-menu-item:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.auth-form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+input[type=text], input[type=email], input[type=password], .text-input--underbar:invalid {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  outline: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.login-button {
+  width: 100%;
+  margin: 0 auto;
+}
+
+img { max-width: 100%; height:auto; }
+
+.map img { max-width: inherit!important; }
+
+.right.col { text-align: right; padding:0 10px 0 0; }
+
+h2.title, h3.title { margin:0; }
+
+.tags, .categories { font-size:12px; margin:5px 0 15px 0; }
+
+p.post-excerpt { margin-top:5px; }
+
+img.post-teaser-image { float:left; padding:20px 20px 10px 0; }
+
+.post-teaser { padding:0; float:right; }
+
+.post-show-more, .load-show-more { display:block; }
+
+.status-bar-icon, .more-icon { padding:0 10px 0 0; }
+
+.post-submitted { font-size:12px; }
+
+.post-url { padding:20px 0 0 0; clear:both; display: inline-block; }
+
+/* ons-icon { opacity:0.7; } */
+
+.status-bar { margin: 10px -10px; } .status-message { padding:10px 0!important; }
+
+/* Share functionality */
+.button-share { margin:0 0 15px 0; }
+
+/* Fix for Onsen 1.2.2 */
+.navigation-bar__title { text-overflow: ellipsis; overflow: hidden; height: auto; }
+
+.navigation-bar--android__center { max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
+
+.row-center { text-align:center; }

@@ -1,0 +1,50 @@
+
+    <ons-page ng-controller="RegistrationController">
+
+        <ons-toolbar fixed-style>
+            
+            <div class="center">User Registration</div>
+            
+        </ons-toolbar>
+            
+        <section style="padding:10px;">
+            
+            <form class="auth-form" name="registerForm" autocomplete="off">
+                
+                <input type="text" placeholder="Enter Username" name="username" ng-model="username" class="text-input--underbar" ng-minlength=5 required>
+                <small class="error" ng-show="registerForm.username.$error.required">Please enter a Username.</small>
+                <small class="error" ng-show="registerForm.username.$error.minlength">Your Username is required to be at least 5 characters.</small>
+
+                <input type="text" placeholder="Enter Display Name" name="display_name" ng-model="display_name" class="text-input--underbar" ng-minlength=5 required>
+                <small class="error" ng-show="registerForm.display_name.$error.required">Please enter a Display Name.</small>
+                <small class="error" ng-show="registerForm.display_name.$error.minlength">Your Name is required to be at least 5 characters.</small>
+
+                <input type="email" placeholder="Enter Email" name="email" ng-model="email" class="text-input--underbar" required>
+                <small class="error" ng-show="registerForm.email.$error.required">Please enter an Email.</small>
+                <small class="error" ng-show="registerForm.email.$error.email">That is not a valid Email. Please enter a valid Email.</small>
+
+                <input type="password" placeholder="Enter Password" name="password" ng-model="password" class="text-input--underbar" required>
+                <small class="error" ng-show="registerForm.password.$error.required">Please enter a Password.</small>
+
+                <input type="password" placeholder="Confirm Password" name="repassword" ng-model="repassword" class="text-input--underbar" required>
+                <small class="error" ng-show="registerForm.repassword.$error.required">Please confirm your Password.</small>
+                <span ng-show="registerForm.repassword.$error.pattern">Pattern error</span>
+
+                <br/>
+                <div align="center" style="margin:0 0 20px 0;">
+                <button ng-show="registerForm.$valid" modifier="large" class="button login-button" ng-click="register(username, email, display_name, password, repassword, special)">
+                Register User 
+                </button>
+                </div>
+
+            </form>
+            
+            <div ng-show="error" ng-bind="error" style="text-align:center; padding:0 0 20px 0;"></div>
+            
+            <div align="center">
+            <ons-button modifier="outline" ng-click="registerBack()">Back to Login</ons-button>
+            </div>
+
+        </section>
+
+    </ons-page>
